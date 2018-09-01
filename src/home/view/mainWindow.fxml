@@ -9,56 +9,61 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.MainWindowController">
+<AnchorPane fx:id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #333333;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="home.controller.MainWindowController">
    <children>
       <Pane prefHeight="540.0" prefWidth="300.0" style="-fx-background-color: #0099ff;">
          <children>
             <FontAwesomeIcon fill="WHITE" iconName="USER" layoutX="91.0" layoutY="323.0" size="150" />
          </children>
       </Pane>
-      <JFXButton buttonType="RAISED" layoutX="556.0" layoutY="438.0" onAction="#onCalculateClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #0099ff;" text="Calculate BMI" textFill="WHITE">
-         <font>
-            <Font name="Haettenschweiler" size="23.0" />
-         </font></JFXButton>
-      <Pane layoutX="322.0" layoutY="80.0" prefHeight="80.0" prefWidth="618.0" style="-fx-border-color: #0099ff; -fx-border-radius: 40; -fx-border-width: 3;">
+      <Pane layoutX="300.0" prefHeight="540.0" prefWidth="660.0">
          <children>
-            <JFXRadioButton fx:id="femaleRadio" layoutX="450.0" layoutY="25.0" prefHeight="39.0" prefWidth="133.0" text="Female" textFill="WHITE">
+            <Pane layoutX="20.0" layoutY="200.0" prefHeight="80.0" prefWidth="620.0" style="-fx-border-color: #0099ff; -fx-border-radius: 40; -fx-border-width: 3;">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Weight" textFill="WHITE">
+                     <font>
+                        <Font name="Haettenschweiler" size="36.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="weightField" layoutX="124.0" layoutY="28.0" prefHeight="25.0" prefWidth="450.0" style="-fx-text-fill: #FFFFFF;" />
+               </children>
+            </Pane>
+            <Pane layoutX="20.0" layoutY="70.0" prefHeight="80.0" prefWidth="620.0" style="-fx-border-color: #0099ff; -fx-border-radius: 40; -fx-border-width: 3;">
+               <children>
+                  <JFXRadioButton fx:id="femaleRadio" layoutX="450.0" layoutY="25.0" prefHeight="39.0" prefWidth="133.0" text="Female" textFill="WHITE">
+                     <font>
+                        <Font name="Haettenschweiler" size="24.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label layoutX="20.0" layoutY="20.0" text="Gender" textFill="WHITE">
+                     <font>
+                        <Font name="Haettenschweiler" size="36.0" />
+                     </font>
+                  </Label>
+                  <JFXRadioButton fx:id="maleRadio" layoutX="200.0" layoutY="25.0" prefHeight="40.0" prefWidth="118.0" text="Male" textFill="WHITE">
+                     <font>
+                        <Font name="Haettenschweiler" size="24.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <FontAwesomeIcon fill="WHITE" iconName="MALE" size="50" text="" x="150.0" y="60.0" />
+                  <FontAwesomeIcon fill="WHITE" iconName="FEMALE" size="50" x="400.0" y="60.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="20.0" layoutY="330.0" prefHeight="80.0" prefWidth="620.0" style="-fx-border-color: #0099ff; -fx-border-radius: 40; -fx-border-width: 3;">
+               <children>
+                  <Label layoutX="20.0" layoutY="20.0" text="Height" textFill="WHITE">
+                     <font>
+                        <Font name="Haettenschweiler" size="36.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="heightField" layoutX="124.0" layoutY="27.0" prefHeight="25.0" prefWidth="450.0" style="-fx-text-fill: #FFFFFF;" />
+               </children>
+            </Pane>
+            <JFXButton buttonType="RAISED" layoutX="255.0" layoutY="450.0" onAction="#onCalculateClicked" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #0099ff;" text="Calculate BMI" textFill="WHITE">
                <font>
-                  <Font name="Haettenschweiler" size="24.0" />
+                  <Font name="Haettenschweiler" size="23.0" />
                </font>
-            </JFXRadioButton>
-            <Label layoutX="20.0" layoutY="20.0" text="Gender" textFill="WHITE">
-               <font>
-                  <Font name="Haettenschweiler" size="36.0" />
-               </font>
-            </Label>
-            <JFXRadioButton fx:id="maleRadio" layoutX="200.0" layoutY="25.0" prefHeight="40.0" prefWidth="118.0" text="Male" textFill="WHITE">
-               <font>
-                  <Font name="Haettenschweiler" size="24.0" />
-               </font>
-            </JFXRadioButton>
-            <FontAwesomeIcon fill="WHITE" iconName="MALE" size="50" text="" x="150.0" y="60.0" />
-            <FontAwesomeIcon fill="WHITE" iconName="FEMALE" size="50" x="400.0" y="60.0" />
-         </children>
-      </Pane>
-      <Pane layoutX="322.0" layoutY="190.0" prefHeight="80.0" prefWidth="618.0" style="-fx-border-color: #0099ff; -fx-border-radius: 40; -fx-border-width: 3;">
-         <children>
-            <Label layoutX="20.0" layoutY="20.0" text="Weight" textFill="WHITE">
-               <font>
-                  <Font name="Haettenschweiler" size="36.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="weightField" layoutX="124.0" layoutY="28.0" prefHeight="25.0" prefWidth="450.0" style="-fx-text-fill: #FFFFFF;" />
-         </children>
-      </Pane>
-      <Pane layoutX="322.0" layoutY="300.0" prefHeight="80.0" prefWidth="618.0" style="-fx-border-color: #0099ff; -fx-border-radius: 40; -fx-border-width: 3;">
-         <children>
-            <Label layoutX="20.0" layoutY="20.0" text="Height" textFill="WHITE">
-               <font>
-                  <Font name="Haettenschweiler" size="36.0" />
-               </font>
-            </Label>
-            <JFXTextField fx:id="heightField" layoutX="124.0" layoutY="27.0" prefHeight="25.0" prefWidth="450.0" style="-fx-text-fill: #FFFFFF;" />
+            </JFXButton>
          </children>
       </Pane>
    </children>
